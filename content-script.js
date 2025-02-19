@@ -345,7 +345,7 @@ function hideStatusFromNewCodingArea(checked) {
 
 // ################# HIDE ACCEPTANCE FROM NEW CODING AREA ############
 function hideAcceptanceFromNewCodingArea(checked) {
-        const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[3].lastElementChild;
+        const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[1].lastElementChild;
         if(acceptanceDiv) {
             if(checked) {
                 acceptanceDiv.classList.remove('hide_leetcode-enhancer')
