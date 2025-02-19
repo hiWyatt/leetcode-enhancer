@@ -2,8 +2,8 @@
 /*
     0 - old version of leetcode/problemset
     1 - new version of leetcode/problemset
-    2 - for https://leetcode.com/tag/* (example - https://leetcode.com/tag/array/)
-    3 - coding area (example - https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+    2 - for https://leetcode.cn/tag/* (example - https://leetcode.cn/tag/array/)
+    3 - coding area (example - https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
     4 - solutions (discussion)
     5 - contest
     6 - new coding area

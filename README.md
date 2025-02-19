@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 **A cross-browser extension to improve :rocket: productivity on 
-<a href="https://leetcode.com" target="_blank">Leetcode</a>**.
+<a href="https://leetcode.cn" target="_blank">Leetcode</a>**.
 
 It is a light-weight browser extension which runs in the menu bar. It boosts your productivity by hiding unnecessary visual elements from the screen, enabling you to focus on what is important. You can change your preferences form the popup menu and find out what best suits your needs.
 
@@ -24,10 +24,10 @@ It is a light-weight browser extension which runs in the menu bar. It boosts you
 * Hide Solutions Users' Profile Images
 
 **Note**: The extension functions on the following URLs :
-* https://leetcode.com/problemset/all/ (old and new UI)
-* https://leetcode.com/tag/
-* https://leetcode.com/problems/
-* https://leetcode.com/problems/discuss/
+* https://leetcode.cn/problemset/all/ (old and new UI)
+* https://leetcode.cn/tag/
+* https://leetcode.cn/problems/
+* https://leetcode.cn/problems/discuss/
 
 ## :star2: Installation
 ### Google Chrome

@@ -136,7 +136,7 @@ function hideDiffOfSimilarProbFromNewCodingArea(checked) {
         return;
 
     anchors = [];
-    urlProb = "https://leetcode.com/problems/";
+    urlProb = "https://leetcode.cn/problems/";
     curUrl = urlProb + window.location.pathname.split("\/")[2] + "/";
     for(i = 0; i < allAnchors.length; i++)
         if(allAnchors[i].href.startsWith(urlProb) && !allAnchors[i].href.startsWith(curUrl))
@@ -275,7 +275,7 @@ function toggleByColName(colName, checked) {
 
 // ################# HIDE DIFF FROM PROBLEM SET TABLE OF CODING AREA
 function hideDiffFromProblemSetTableOfCodingArea(checked) {
-    diffTextList = document.querySelectorAll('[rel="https://leetcode.com/problemset/"]');
+    diffTextList = document.querySelectorAll('[rel="https://leetcode.cn/problemset/"]');
     
     if(diffTextList == null)
         return;

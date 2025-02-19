@@ -146,7 +146,7 @@ function hideDiffOfSimilarProbFromNewCodingArea(checked) {
         return;
 
     anchors = [];
-    urlProb = "https://leetcode.com/problems/";
+    urlProb = "https://leetcode.cn/problems/";
     curUrl = urlProb + window.location.pathname.split("\/")[2] + "/";
     for(i = 0; i < allAnchors.length; i++)
         if(allAnchors[i].href.startsWith(urlProb) && !allAnchors[i].href.startsWith(curUrl))
@@ -285,7 +285,7 @@ function toggleByColName(colName, checked) {
 
 // ################# HIDE DIFF FROM PROBLEM SET TABLE OF CODING AREA
 function hideDiffFromProblemSetTableOfCodingArea(checked) {
-    diffTextList = document.querySelectorAll('[rel="https://leetcode.com/problemset/"]');
+    diffTextList = document.querySelectorAll('[rel="https://leetcode.cn/problemset/"]');
     
     if(diffTextList == null)
         return;
@@ -345,7 +345,8 @@ function hideStatusFromNewCodingArea(checked) {
 
 // ################# HIDE ACCEPTANCE FROM NEW CODING AREA ############
 function hideAcceptanceFromNewCodingArea(checked) {
-        const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[1].lastElementChild;
+        // const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[2].lastElementChild;
+        const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[2];
         if(acceptanceDiv) {
             if(checked) {
                 acceptanceDiv.classList.remove('hide_leetcode-enhancer')
@@ -650,8 +651,8 @@ module.exports = sendMessage;
 /*
     0 - old version of leetcode/problemset
     1 - new version of leetcode/problemset
-    2 - for https://leetcode.com/tag/* (example - https://leetcode.com/tag/array/)
-    3 - coding area (example - https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+    2 - for https://leetcode.cn/tag/* (example - https://leetcode.cn/tag/array/)
+    3 - coding area (example - https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
     4 - solutions (discussion)
     5 - contest
     6 - new coding area

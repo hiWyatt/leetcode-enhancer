@@ -9,7 +9,7 @@
         "96": "icons/logo-96.png"
     },
     "content_scripts": [{
-        "matches": ["https://leetcode.com/*"],
+        "matches": ["https://leetcode.cn/*"],
         "css": ["content-script.css"],
         "js": ["content-script.js"]
     }],
@@ -30,7 +30,7 @@
             "dark": "icons/logo.png",
             "size": 48
         }],
-        "show_matches": ["https://leetcode.com/*"]
+        "show_matches": ["https://leetcode.cn/*"]
     },
     "permissions": ["storage"],
     "optional_host_permissions": ["https://api.cohere.ai/*"]
