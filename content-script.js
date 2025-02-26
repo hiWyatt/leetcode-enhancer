@@ -345,15 +345,24 @@ function hideStatusFromNewCodingArea(checked) {
 
 // ################# HIDE ACCEPTANCE FROM NEW CODING AREA ############
 function hideAcceptanceFromNewCodingArea(checked) {
-        const acceptanceDiv =  document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling.children[1].lastElementChild;
-        if(acceptanceDiv) {
-            if(checked) {
-                acceptanceDiv.classList.remove('hide_leetcode-enhancer')
+    const parentElement = document.querySelector('[data-track-load="description_content"]').parentElement.nextSibling;
+    if (!parentElement) return;
+
+    for (let i = 0; i < parentElement.children.length; i++) {
+        const child = parentElement.children[i];
+        const acceptanceRateElement = Array.from(child.children).find(
+            el => el.innerText && /acceptance\s*rate/i.test(el.innerText.trim())
+        );
+
+        if (acceptanceRateElement) {
+            if (checked) {
+                acceptanceRateElement.classList.remove('hide_leetcode-enhancer');
             } else {
-                acceptanceDiv.classList.add('hide_leetcode-enhancer')
+                acceptanceRateElement.classList.add('hide_leetcode-enhancer');
             }
+            break;
         }
-    
+    }
 }
 
 // ################# HIDE ACCEPTANCE FROM OLD CODING AREA ############
