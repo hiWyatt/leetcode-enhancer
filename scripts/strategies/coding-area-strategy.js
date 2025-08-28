@@ -3,7 +3,9 @@ const FeatureStrategy = require('./base-strategy');
 class CodingAreaStrategy extends FeatureStrategy {
 
     hideSolvedDiff(checked) {
-        const diffCodingArea = document.querySelector('[data-track-load="description_content"]')?.parentElement?.previousElementSibling?.firstChild;
+        console.log('hideSolvedDiff', checked);
+        // const diffCodingArea = document.querySelector('[data-track-load="description_content"]')?.parentElement?.previousElementSibling?.firstChild;
+        const diffCodingArea = document.querySelector('[class="flex gap-1"]').firstChild;
         const diffNext = document.querySelectorAll("a[rel ='noopener noreferrer'] div");
 
         if (diffCodingArea) {
@@ -19,7 +21,7 @@ class CodingAreaStrategy extends FeatureStrategy {
         const allAnchors = document.querySelectorAll('a');
         if (!allAnchors || allAnchors.length === 0) return;
 
-        const urlProb = "https://leetcode.com/problems/";
+        const urlProb = "https://leetcode.cn/problems/";
         const curUrl = urlProb + window.location.pathname.split("/")[2] + "/";
         
         allAnchors.forEach(anchor => {
@@ -33,19 +35,24 @@ class CodingAreaStrategy extends FeatureStrategy {
     }
 
     hideStatus(checked) {
-        const solvedMarkParent = document.querySelector('[data-track-load="description_content"]')?.parentNode?.previousSibling?.previousSibling?.lastChild;
-        if (solvedMarkParent && solvedMarkParent.classList.contains('text-body')) {
-            solvedMarkParent.classList[checked ? 'remove' : 'add']('hide_leetcode-enhancer');
+        // const solvedMarkParent = document.querySelector('[data-track-load="description_content"]')?.parentNode?.previousSibling?.previousSibling?.lastChild;
+        // if (solvedMarkParent && solvedMarkParent.classList.contains('text-body')) {
+        //     solvedMarkParent.classList[checked ? 'remove' : 'add']('hide_leetcode-enhancer');
+        // }
+        const statusElement = document.querySelector('[class="flex items-start gap-2"]').nextElementSibling;
+        if (statusElement) {
+            statusElement.classList[checked ? 'remove' : 'add']('hide_leetcode-enhancer');
         }
     }
 
     hideAcceptance(checked) {
-        const parentElement = document.querySelector('[data-track-load="description_content"]')?.parentElement?.nextSibling;
-        if (!parentElement) return;
+        // const parentElement = document.querySelector('[data-track-load="description_content"]')?.parentElement?.nextSibling;
+        // if (!parentElement) return;
 
-        const acceptanceRateElement = [...parentElement.children]
-            .find(child => child.textContent.toLowerCase().includes('acceptance'))?.lastElementChild;
+        // const acceptanceRateElement = [...parentElement.children]
+        //     .find(child => child.textContent.toLowerCase().includes('acceptance'))?.lastElementChild;
 
+        const acceptanceRateElement = document.querySelector('[class="mb-2 flex items-center space-x-4"]').parentElement.nextElementSibling;
         if (acceptanceRateElement) {
             acceptanceRateElement.classList[checked ? 'remove' : 'add']('hide_leetcode-enhancer');
         }

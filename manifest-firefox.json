@@ -9,7 +9,9 @@
         "96": "icons/logo-96.png"
     },
     "content_scripts": [{
-        "matches": ["https://leetcode.com/*"],
+        "matches": [
+            "https://leetcode.cn/*"
+        ],
         "css": ["content-script.css"],
         "js": ["content-script.js"]
     }],

@@ -263,7 +263,7 @@ function sendMessageToContentScriptToGetCode(apiKey) {
 
         const activeTab = tabs[0];
 
-        if (!activeTab.url.includes("leetcode.com")) {
+        if (!activeTab.url.includes("leetcode.cn")) {
             alert("Please navigate to a LeetCode page first.");
             return;
         }

@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 **A cross-browser extension to improve :rocket: productivity on 
-<a href="https://leetcode.com" target="_blank">Leetcode</a>**.
+<a href="https://leetcode.cn" target="_blank">Leetcode</a>**.
 
 It is a light-weight browser extension which can be pinned in menu bar. It boosts your productivity by hiding unnecessary visual elements from the screen, enabling you to focus on what is important. You can change your preferences form the popup menu and find out what best suits your needs.
 
@@ -24,9 +24,9 @@ It is a light-weight browser extension which can be pinned in menu bar. It boost
 * Hide / Show Problems Table Columns (incl. Difficulty, Acceptance etc.)
 
 **Note**: The extension functions on the following URLs :
-* https://leetcode.com/problemset/
-* https://leetcode.com/problems/*
-* https://leetcode.com/contest/
+* https://leetcode.cn/problemset/
+* https://leetcode.cn/problems/*
+* https://leetcode.cn/contest/
 
 ## :star2: Installation
 ### Google Chrome
